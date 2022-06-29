@@ -1,13 +1,13 @@
 <script>
-	import Sentence from "./SidebarRight/Sentence.vue";
-	import QuickComment from "./SidebarRight/QuickComment.vue";
-	import MusicPlayer from "./SidebarRight/MusicPlayer.vue";
+	import Sentence from "./SidebarRight/Sentence";
+	import QuickComment from "./SidebarRight/QuickComment";
+	import NewSaySay from "./SidebarRight/NewSaySay";
 
 	export default {
 		name: "SidebarRight",
 		components: {
 			Sentence,
-			MusicPlayer,
+			NewSaySay,
 			QuickComment
 		}
 	}
@@ -15,7 +15,7 @@
 
 <template>
     <div id="Sentence"><Sentence/></div>
-    <div id="MusicPlayer"><MusicPlayer/></div>
+	<div id="NewSaySay"><NewSaySay/></div>
     <div id="QuickComment"><QuickComment/></div>
 </template>
 
@@ -33,7 +33,7 @@
         border-radius: 5px;
     }
 
-    #MusicPlayer {
+    #NewSaySay {
         position: relative;
         top: 12px;
         left: 0px;

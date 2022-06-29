@@ -1,52 +1,52 @@
 <template>
 	<ul id="HeaderList">
 		<li class="HeaderList-li">
-			<a href="/">
+			<router-link to="/">
 				<img class="header-icon"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/home.icon.png">首页
-			</a>
+			</router-link>
 		</li>
 		<li class="HeaderList-li">
-			<a href="/pc/program">
+			<router-link to="/pc/program">
 				<img class="header-icon"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/code.icon.png">编程
-			</a>
+			</router-link>
 		</li>
 		<li class="HeaderList-li">
-			<a href="/pc/book">
+			<router-link to="/pc/book">
 				<img class="header-icon"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/book.icon.png">书籍
-			</a>
+			</router-link>
 		</li>
 		<li class="HeaderList-li">
-			<a href="/pc/daily">
+			<router-link to="/pc/daily">
 				<img class="header-icon"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/daily.icon.png">日常
-			</a>
+			</router-link>
 		</li>
 		<li class="HeaderList-li">
-			<a href="/pc/message">
+			<router-link to="/pc/message">
 				<img class="header-icon"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/message.icom.png">留言
-			</a>
+			</router-link>
 		</li>
 		<li class="HeaderList-li">
-			<a href="/pc/saysay">
+			<router-link to="/pc/saysay">
 				<img class="header-icon"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/saysay.icon.png">说说
-			</a>
+			</router-link>
 		</li>
 		<li class="HeaderList-li">
-			<a href="/pc/link">
+			<router-link to="/pc/link">
 				<img class="header-icon"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/link.icon.png">友链
-			</a>
+			</router-link>
 		</li>
 		<li class="HeaderList-li">
-			<a href="/pc/user">
+			<router-link to="/pc/user">
 				<img id="login"
 					 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/Header/user.icon.png">
-			</a>
+			</router-link>
 		</li>
 	</ul>
 </template>

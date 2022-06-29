@@ -1,7 +1,7 @@
 <script>
-    import UserCard from './SidebarLeft/UserCard.vue'
-    import UserInfo from './SidebarLeft/UserInfo.vue'
-    import BlogRunningTime from './SidebarLeft/BlogRunningTime.vue'
+    import UserCard from './SidebarLeft/UserCard'
+    import UserInfo from './SidebarLeft/UserInfo'
+    import BlogRunningTime from './SidebarLeft/BlogRunningTime'
 
 	export default {
 		name: "SidebarLeft",

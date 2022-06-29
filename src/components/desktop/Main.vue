@@ -3,7 +3,7 @@
 		<SidebarLeft/>
 	</div>
 	<div id="Content">
-
+		<router-view/>
 	</div>
 	<div id="SidebarRight">
 		<SidebarRight/>
@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import SidebarLeft from "./Main/SidebarLeft.vue";
-import SidebarRight from "./Main/SidebarRight.vue";
+import SidebarLeft from "./Main/SidebarLeft";
+import SidebarRight from "./Main/SidebarRight";
 
 
 export default {
@@ -37,7 +37,7 @@ export default {
 	margin: 0 16px;
 	left: 587px;
 	width: 746px;
-	height: 866px;
+	height: 800px;
 	background-color: rgba(245, 245, 245, 0.5);
 	border-radius: 5px;
 }

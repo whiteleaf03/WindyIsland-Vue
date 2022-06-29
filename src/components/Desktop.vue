@@ -9,8 +9,8 @@
 
 <script>
 
-import Menu from "./desktop/Menu.vue";
-import Main from "./desktop/Main.vue";
+import Menu from "./desktop/Menu";
+import Main from "./desktop/Main";
 import axios from "axios";
 
 export default {
@@ -44,7 +44,7 @@ export default {
 #Main {
 	position: relative;
 	width: 1280px;
-	height: auto;
+	height: 800px;
 	margin: 0 auto 0;
 }
 </style>
