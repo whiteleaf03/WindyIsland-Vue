@@ -1,19 +1,35 @@
 <script>
-export default {name: "QuickComment"}
+import axios from "axios";
+
+export default {
+	name: "QuickComment",
+	methods: {
+		postComment() {
+			axios.get('http://localhost:8081/comment/findAll')
+				.then(function (response) {
+					console.log(response);
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		}
+	}
+}
 
 
 </script>
 
 <template>
-	<div id="comment-title"><img id="comment-title-img"
-								 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/comment-title.png">
+	<div id="comment-title">
+		<img id="comment-title-img"
+			 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/comment-title.png">
 	</div>
 	<form>
-		<input v-model="commentusername" id="comment-userName" class="comment-input" name="username" placeholder="昵称*"
+		<input id="comment-userName" class="comment-input" name="username" placeholder="昵称*"
 			   type="text">
-		<input v-model="commentuseremail" id="comment-email" class="comment-input" name="useremail" placeholder="邮箱*"
+		<input id="comment-email" class="comment-input" name="useremail" placeholder="邮箱*"
 			   type="text">
-		<textarea v-model="commentusercomment" id="comment-userComment" class="comment-input" name="usercomment"
+		<textarea id="comment-userComment" class="comment-input" name="usercomment"
 				  placeholder="评论由人工审核&#13;&#10;通过后会发送邮件提示&#13;&#10;最多255个字哦(｀・ω・´)"></textarea>
 		<input id="comment-valid" class="comment-input" placeholder="验证信息" type="text">
 		<button v-on:click="postComment" id="comment-button" class="comment-input" type="submit">提交</button>

@@ -1,7 +1,6 @@
 <template>
-    <Desktop/>
-
-<!--	<router-view></router-view>-->
+<!--    <Desktop/>-->
+	<router-view></router-view>
 </template>
 
 <script>

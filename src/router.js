@@ -8,45 +8,64 @@ import SaySay from "./components/desktop/Main/Content/SaySay";
 import Link from "./components/desktop/Main/Content/Link";
 import Home from "./components/desktop/Main/Content/Home";
 
-const routes = [
+const pcRoutes = [
     {
         path: '/',
-        redirect: "/pc/home"
+        redirect: "home"
     },
     {
-        path: '/pc/home',
+        path: 'home',
         component: Home
     },
     {
-        path: '/pc/program',
+        path: 'program',
         component: Program
     },
     {
-        path: '/pc/book',
+        path: 'book',
         component: Book
     },
     {
-        path: '/pc/daily',
+        path: 'daily',
         component: Daily
     },
     {
-        path: '/pc/message',
+        path: 'message',
         component: Message
     },
     {
-        path: '/pc/saysay',
+        path: 'saysay',
         component: SaySay
     },
     {
-        path: '/pc/link',
+        path: 'link',
         component: Link
     }
 ]
 
+const routes = [
+    {
+        path: '/',
+        name: 'root',
+        redirect: '/pc/home'
+    },
+    {
+        path: '/pc',
+        name: 'pc',
+        redirect: '/pc/home',
+        component: Desktop,
+        children: pcRoutes
+    },
+    // {
+    //     path: '/mobile',
+    //     name: 'mobile',
+    // }
+]
+
+
 const router = VueRouter.createRouter({
-    // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
     history: VueRouter.createWebHistory(),
-    routes // `routes: routes` 的缩写
+    routes
 })
 
 export default router

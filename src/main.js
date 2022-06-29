@@ -4,6 +4,8 @@ import VueAxios from 'vue-axios'
 import axios from 'axios'
 import router from './router'
 
+axios.defaults.baseURL = '/api/'
+
 createApp(App)
     .use(VueAxios, axios)
     .use(router)

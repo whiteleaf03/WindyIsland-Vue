@@ -1,5 +1,5 @@
 <template>
-	Welcome! There is WindyIsland!
+	<img src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/welcome-language.png">
 </template>
 
 <script>
@@ -9,5 +9,9 @@ export default {
 </script>
 
 <style scoped>
-
+	img {
+		position: relative;
+		top: -50px;
+		left: 37px;
+	}
 </style>
