@@ -1,5 +1,4 @@
 <template>
-<!--    <Desktop/>-->
 	<router-view></router-view>
 </template>
 

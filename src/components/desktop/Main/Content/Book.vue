@@ -17,13 +17,15 @@
 </template>
 
 <script>
-import {getUser} from "../../../../request";
+// import {getUser} from "../../../../request";
+import axios from "axios";
 
 export default {
 	name: "Book",
+
 	methods: {
 		showData() {
-			console.log(getUser())
+			// console.log(getUser())
 		}
 	}
 }

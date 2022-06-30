@@ -1,17 +1,41 @@
 <script>
-import axios from "axios";
+
+import {postQuickSaySay} from "../../../../request";
 
 export default {
 	name: "QuickComment",
+	data() {
+		return {
+			randomNum1: 0,
+			randomNum2: 0,
+			randomResult: 0,
+			question: "",
+			answer: "",
+			test: "0 + 0 = ?"
+		}
+	},
+	created() {
+		this.createRandomNum()
+	},
 	methods: {
-		postComment() {
-			axios.get('http://localhost:8081/comment/findAll')
-				.then(function (response) {
-					console.log(response);
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
+		postQuickComment() {
+			postQuickSaySay(this.$refs.username.value, this.$refs.useremail.value, this.$refs.message.value)
+		},
+		createRandomNum() {
+			this.randomNum1 = Math.round(Math.random() * 10);
+			this.randomNum2 = Math.round(Math.random() * 10);
+			this.randomResult = this.randomNum1 + this.randomNum2;
+			this.question = `${this.randomNum1} + ${this.randomNum2} = ?`
+
+		},
+		validResult() {
+			this.answer = this.$refs.answer.value
+			if (this.answer === `${this.randomResult}`) {
+				this.postQuickComment()
+				alert("评论成功！")
+			} else {
+				alert(`验证码错误！ ${this.answer} ${this.randomResult}`)
+			}
 		}
 	}
 }
@@ -22,17 +46,17 @@ export default {
 <template>
 	<div id="comment-title">
 		<img id="comment-title-img"
-			 src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/comment-title.png">
+			 src="/image/main/quickComment/comment-title.png">
 	</div>
 	<form>
-		<input id="comment-userName" class="comment-input" name="username" placeholder="昵称*"
+		<input id="comment-userName" class="comment-input" ref="username" placeholder="昵称*"
 			   type="text">
-		<input id="comment-email" class="comment-input" name="useremail" placeholder="邮箱*"
+		<input id="comment-email" class="comment-input" ref="useremail" placeholder="邮箱*"
 			   type="text">
-		<textarea id="comment-userComment" class="comment-input" name="usercomment"
+		<textarea id="comment-userComment" class="comment-input" ref="message"
 				  placeholder="评论由人工审核&#13;&#10;通过后会发送邮件提示&#13;&#10;最多255个字哦(｀・ω・´)"></textarea>
-		<input id="comment-valid" class="comment-input" placeholder="验证信息" type="text">
-		<button v-on:click="postComment" id="comment-button" class="comment-input" type="submit">提交</button>
+		<input id="comment-valid" class="comment-input" :placeholder="this.question" type="text" ref="answer">
+		<button v-on:click="validResult" id="comment-button" class="comment-input" type="submit">提交</button>
 	</form>
 </template>
 

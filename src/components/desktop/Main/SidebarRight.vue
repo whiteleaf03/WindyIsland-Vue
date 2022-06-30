@@ -1,13 +1,13 @@
 <script>
 	import Sentence from "./SidebarRight/Sentence";
 	import QuickComment from "./SidebarRight/QuickComment";
-	import NewSaySay from "./SidebarRight/NewSaySay";
+	import LatestSaySay from "./SidebarRight/LatestSaySay";
 
 	export default {
 		name: "SidebarRight",
 		components: {
 			Sentence,
-			NewSaySay,
+			LatestSaySay,
 			QuickComment
 		}
 	}
@@ -15,7 +15,7 @@
 
 <template>
     <div id="Sentence"><Sentence/></div>
-	<div id="NewSaySay"><NewSaySay/></div>
+	<div id="LatestSaySay"><LatestSaySay/></div>
     <div id="QuickComment"><QuickComment/></div>
 </template>
 
@@ -33,7 +33,7 @@
         border-radius: 5px;
     }
 
-    #NewSaySay {
+    #LatestSaySay {
         position: relative;
         top: 12px;
         left: 0px;

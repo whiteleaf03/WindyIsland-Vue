@@ -1,41 +1,24 @@
 import axios from "axios";
 
-export function getUser() {
-    let result = 1;
-    axios.get('http://localhost:8081/user/findAll')
-        .then(function (response) {
-            result = response.data;
-            //数据
-            console.log(result)
-            return response.data
+export async function getSaySay() {
+    let saysay;
+    await axios.get('http://localhost:8081/saysay/findAll')
+        .then( (response) => {
+            saysay = response.data
         });
-    //1
-    console.log(result)
+    return saysay
 }
 
-function addUser(username, password, useremail) {
-    axios.post('http://localhost:8081/user/add', {
+export async function postQuickSaySay(username, useremail, message) {
+    axios.post('http://localhost:8081/comment/quickAdd', {
         username: username,
-        password: password,
-        useremail: useremail
+        useremail: useremail,
+        message: message
     })
         .then(function (response) {
             console.log(response);
         })
         .catch(function (error) {
             console.log(error);
-        });
-}
-
-function getComment() {
-    axios.get('http://localhost:8081/comment/findAll')
-        .then(function (response) {
-            console.log(response.data[0]);
-        });
-}
-function getSaySay() {
-    axios.get('http://localhost:8081/saysay/findAll')
-        .then(function (response) {
-            console.log(response.data[0]);
         });
 }
