@@ -13,30 +13,17 @@
 <!--			提取码：14hj-->
 <!--		</div>-->
 <!--	</div>-->
-	<input v-on:click="getComment" type="button">
+	<input v-on:click="showData" type="button">
 </template>
 
 <script>
-import axios from "axios";
+import {getUser} from "../../../../request";
 
 export default {
 	name: "Book",
 	methods: {
-		getComment() {
-			// axios.get('http://localhost:8081/user/findAll')
-			// 	.then(function (response) {
-			// 		console.log(response.data[0]);
-			// 	});
-			// axios.post('/user', {
-			// 	firstName: 'Fred',
-			// 	lastName: 'Flintstone'
-			// })
-			// 	.then(function (response) {
-			// 		console.log(response);
-			// 	})
-			// 	.catch(function (error) {
-			// 		console.log(error);
-			// 	});
+		showData() {
+			console.log(getUser())
 		}
 	}
 }
