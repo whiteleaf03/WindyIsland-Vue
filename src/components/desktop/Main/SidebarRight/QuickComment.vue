@@ -11,15 +11,18 @@ export default {
 			randomResult: 0,
 			question: "",
 			answer: "",
-			test: "0 + 0 = ?"
+			test: "0 + 0 = ?",
+			result: ""
 		}
 	},
 	created() {
 		this.createRandomNum()
 	},
 	methods: {
-		postQuickComment() {
-			postQuickSaySay(this.$refs.username.value, this.$refs.useremail.value, this.$refs.message.value)
+		async postQuickComment() {
+			this.result = await postQuickSaySay(this.$refs.username.value, this.$refs.useremail.value, this.$refs.message.value)
+			alert(this.result)
+			await this.$router.push('/pc/message')
 		},
 		createRandomNum() {
 			this.randomNum1 = Math.round(Math.random() * 10);
@@ -32,7 +35,6 @@ export default {
 			this.answer = this.$refs.answer.value
 			if (this.answer === `${this.randomResult}`) {
 				this.postQuickComment()
-				alert("评论成功！")
 			} else {
 				alert(`验证码错误！ ${this.answer} ${this.randomResult}`)
 			}
@@ -56,7 +58,7 @@ export default {
 		<textarea id="comment-userComment" class="comment-input" ref="message"
 				  placeholder="评论由人工审核&#13;&#10;通过后会发送邮件提示&#13;&#10;最多255个字哦(｀・ω・´)"></textarea>
 		<input id="comment-valid" class="comment-input" :placeholder="this.question" type="text" ref="answer">
-		<button v-on:click="validResult" id="comment-button" class="comment-input" type="submit">提交</button>
+		<input v-on:click="validResult" id="comment-button" class="comment-input" type="button" value="提交">
 	</form>
 </template>
 
