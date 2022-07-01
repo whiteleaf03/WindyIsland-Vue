@@ -10,7 +10,7 @@ export default defineConfig({
     base: "../",
     server: {
         open: true,
-        port:8080,
+        port:3000,
         proxy: {
             '/api': {
                 target: 'http://localhost:8081',
@@ -18,5 +18,12 @@ export default defineConfig({
                 rewrite: (path) =>path.replace(/^\/api/, ''),
             }
         }
+    },
+    preview: {
+        port: 8080,
+        open: true
+    },
+    build: {
+        outDir: "blog-vue"
     }
 })

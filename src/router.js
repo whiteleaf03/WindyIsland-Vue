@@ -1,65 +1,92 @@
 import * as VueRouter from 'vue-router'
 import Desktop from "./components/Desktop.vue";
-import Program from "./components/desktop/Main/Content/Program";
-import Book from "./components/desktop/Main/Content/Book";
-import Daily from "./components/desktop/Main/Content/Daily";
-import Message from "./components/desktop/Main/Content/Message";
-import SaySay from "./components/desktop/Main/Content/SaySay";
-import Link from "./components/desktop/Main/Content/Link";
-import Home from "./components/desktop/Main/Content/Home";
+import desktopProgram from "./components/desktop/Main/Content/desktopProgram";
+import desktopBook from "./components/desktop/Main/Content/desktopBook";
+import desktopDaily from "./components/desktop/Main/Content/desktopDaily";
+import desktopMessage from "./components/desktop/Main/Content/desktopMessage";
+import desktopSaySay from "./components/desktop/Main/Content/desktopSaySay";
+import desktopLink from "./components/desktop/Main/Content/desktopLink";
+import desktopHome from "./components/desktop/Main/Content/desktopHome";
+import Mobile from "./components/Mobile";
 
-const pcRoutes = [
+const desktopRoutes = [
     {
         path: '/',
         redirect: "home"
     },
     {
         path: 'home',
-        component: Home
+        component: desktopHome
     },
     {
         path: 'program',
-        component: Program
+        component: desktopProgram
     },
     {
         path: 'book',
-        component: Book
+        component: desktopBook
     },
     {
         path: 'daily',
-        component: Daily
+        component: desktopDaily
     },
     {
         path: 'message',
-        component: Message
+        component: desktopMessage
     },
     {
         path: 'saysay',
-        component: SaySay
+        component: desktopSaySay
     },
     {
         path: 'link',
-        component: Link
+        component: desktopLink
     }
 ]
+
+// const mobileRoutes = [
+//     {
+//         path: 'home',
+//     },
+//     {
+//         path: 'program',
+//     },
+//     {
+//         path: 'book',
+//     },
+//     {
+//         path: 'daily',
+//     },
+//     {
+//         path: 'message',
+//     },
+//     {
+//         path: 'saysay',
+//     },
+//     {
+//         path: 'link',
+//     }
+// ]
 
 const routes = [
     {
         path: '/',
         name: 'root',
-        redirect: '/pc/home'
+        redirect: '/desktop/home'
     },
     {
-        path: '/pc',
-        name: 'pc',
-        redirect: '/pc/home',
+        path: '/desktop',
+        name: 'desktop',
+        redirect: '/desktop/home',
         component: Desktop,
-        children: pcRoutes
+        children: desktopRoutes
     },
-    // {
-    //     path: '/mobile',
-    //     name: 'mobile',
-    // }
+    {
+        path: '/mobile',
+        name: 'mobile',
+        component: Mobile
+        // children: mobileRoutes
+    }
 ]
 
 

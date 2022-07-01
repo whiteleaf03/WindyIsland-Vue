@@ -1,37 +1,29 @@
 <template>
-	<div id="Menu">
-		<Menu/>
+	<div id="desktop-menu">
+		<desktop-menu/>
 	</div>
-	<div id="Main">
-		<Main/>
+	<div id="desktop-main">
+		<desktop-main/>
 	</div>
 </template>
 
 <script>
 
-import Menu from "./desktop/Menu";
-import Main from "./desktop/Main";
-import axios from "axios";
+import desktopMenu from "./desktop/desktopMenu";
+import desktopMain from "./desktop/desktopMain";
 
 export default {
 	name: "Desktop",
 	components: {
-		Menu,
-		Main
-	},
-	methods: {
-		postData() {
-			axios.get("http://localhost:8081/user/findAll").then((response) => {
-				console.log(response.data)
-			})
-			console.log("测试成功！")
-		}
+		desktopMenu,
+		desktopMain
 	}
 }
 </script>
 
-<style scoped>
-#Menu {
+<style>
+
+#desktop-menu {
 	position: relative;
 	width: 100%;
 	height: 45px;
@@ -41,7 +33,7 @@ export default {
 	font-size: 15px;
 }
 
-#Main {
+#desktop-main {
 	position: relative;
 	width: 1280px;
 	height: 800px;
