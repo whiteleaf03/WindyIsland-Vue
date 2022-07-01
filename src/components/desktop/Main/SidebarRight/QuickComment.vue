@@ -20,9 +20,10 @@ export default {
 	},
 	methods: {
 		async postQuickComment() {
-			this.result = await postQuickSaySay(this.$refs.username.value, this.$refs.useremail.value, this.$refs.message.value)
+			this.result = await postQuickSaySay(this.$refs.username.value, this.$refs.email.value, this.$refs.message.value)
 			alert(this.result)
 			await this.$router.push('/pc/message')
+
 		},
 		createRandomNum() {
 			this.randomNum1 = Math.round(Math.random() * 10);
@@ -51,9 +52,9 @@ export default {
 			 src="/image/main/quickComment/comment-title.png">
 	</div>
 	<form>
-		<input id="comment-userName" class="comment-input" ref="username" placeholder="昵称*"
+		<input id="comment-username" class="comment-input" ref="username" placeholder="昵称*"
 			   type="text">
-		<input id="comment-email" class="comment-input" ref="useremail" placeholder="邮箱*"
+		<input id="comment-email" class="comment-input" ref="email" placeholder="邮箱*"
 			   type="text">
 		<textarea id="comment-userComment" class="comment-input" ref="message"
 				  placeholder="评论由人工审核&#13;&#10;通过后会发送邮件提示&#13;&#10;最多255个字哦(｀・ω・´)"></textarea>
@@ -92,7 +93,7 @@ export default {
 	border: 1px solid #e58900;
 }
 
-#comment-userName {
+#comment-username {
 	display: inline-block;
 	height: 25px;
 	position: absolute;

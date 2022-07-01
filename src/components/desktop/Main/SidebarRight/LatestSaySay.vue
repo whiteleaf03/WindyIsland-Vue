@@ -22,6 +22,7 @@ export default {
 	},
 	created() {
 		this.getLatestSaySay()
+		this.timer = setInterval(this.getLatestSaySay, 1000)
 	},
 	methods: {
 		async getLatestSaySay() {

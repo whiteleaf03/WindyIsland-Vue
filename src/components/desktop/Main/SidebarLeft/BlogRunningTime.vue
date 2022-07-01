@@ -13,6 +13,7 @@ export default {
         };
     },
     created() {
+		this.getBlogRunningTime()
         this.timer = setInterval(this.getBlogRunningTime, 1000)
     },
     methods: {
@@ -29,7 +30,11 @@ export default {
             const day = RunTime % 365;
             RunTime = (RunTime - day) / 365;
             const year = RunTime;
-            this.value = `${year} 年 ${day} 天 ${hour} 时 ${min} 分 ${sec} 秒`;
+			if (`${sec}`.length === 1) {
+				this.value = `${year} 年 ${day} 天 ${hour} 时 ${min} 分 0${sec} 秒`;
+			} else {
+				this.value = `${year} 年 ${day} 天 ${hour} 时 ${min} 分 ${sec} 秒`;
+			}
         }
     }
 };

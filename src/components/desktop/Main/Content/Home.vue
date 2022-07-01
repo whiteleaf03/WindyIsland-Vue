@@ -1,5 +1,5 @@
 <template>
-	<img src="https://windy-island-static.oss-cn-hangzhou.aliyuncs.com/image/welcome-language.png">
+	<img src="/image/welcome-language.png">
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
 <style scoped>
 	img {
 		position: relative;
-		top: -50px;
-		left: 37px;
+		top: -20px;
+		left: 67px;
 	}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<img src="/venti.jpg">
+	<img src="/image/venti.jpg">
 </template>
 
 <script>

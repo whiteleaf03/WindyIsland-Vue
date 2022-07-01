@@ -3,9 +3,7 @@
 		<SidebarLeft/>
 	</div>
 	<div id="Content-Back">
-		<div id="Content-Front">
-			<router-view/>
-		</div>
+		<router-view/>
 	</div>
 	<div id="SidebarRight">
 		<SidebarRight/>
@@ -39,15 +37,9 @@ export default {
 	margin: 0 16px;
 	left: 587px;
 	width: 746px;
-	height: 800px;
+	height: auto;
 	background-color: rgba(245, 245, 245, 0.5);
 	border-radius: 5px;
-}
-
-#Content-Front {
-	margin: 32px;
-	width: 682px;
-	height: 736px;
 }
 
 #SidebarRight {
