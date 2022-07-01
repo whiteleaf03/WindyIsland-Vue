@@ -23,7 +23,7 @@ export default {
 			this.result = await postQuickSaySay(this.$refs.username.value, this.$refs.email.value, this.$refs.message.value)
 			alert(this.result)
 			await this.$router.push('/pc/message')
-
+			location.reload()
 		},
 		createRandomNum() {
 			this.randomNum1 = Math.round(Math.random() * 10);

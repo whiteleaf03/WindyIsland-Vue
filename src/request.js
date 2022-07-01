@@ -4,7 +4,7 @@ import qs from "qs";
 //查询所有说说
 export async function getSaySay() {
     let saysay;
-    await axios.get('http://localhost:8081/saysay/findAll')
+    await axios.get('http://localhost:8080/api/saysay/findAll')
         .then( (response) => {
             saysay = response.data
         });
@@ -14,7 +14,7 @@ export async function getSaySay() {
 //快捷评论
 export async function postQuickSaySay(username, email, message) {
     let result;
-    await axios.post('http://localhost:8081/comment/quickAdd', qs.stringify({
+    await axios.post('http://localhost:8080/api/comment/quickAdd', qs.stringify({
         username: username,
         email: email,
         message: message
@@ -32,7 +32,7 @@ export async function postQuickSaySay(username, email, message) {
 //查询所有评论
 export async function getComment() {
     let comments;
-    await axios.get('http://localhost:8081/comment/findAll')
+    await axios.get('http://localhost:8080/api/comment/findAll')
         .then( (response) => {
             comments = response.data
             console.log(comments)
