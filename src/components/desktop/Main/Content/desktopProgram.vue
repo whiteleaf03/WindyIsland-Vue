@@ -1,5 +1,5 @@
 <template>
-	<img src="/image/venti.jpg">
+	<img src="/desktop/image/venti.jpg">
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
 		position: relative;
 		width: 50%;
 		height: 50%;
-		left: 0px;
-		top: 0px;
+		left: 0;
+		top: 0;
 	}
 </style>

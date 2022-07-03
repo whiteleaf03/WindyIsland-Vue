@@ -8,17 +8,17 @@ export default defineConfig({
         extensions: ['.vue', '.js']
     },
     base: "../",
-    server: {
-        open: true,
-        port:3000,
-        proxy: {
-            '/api': {
-                target: 'http://localhost:8081',
-                changeOrigin: true,
-                rewrite: (path) =>path.replace(/^\/api/, ''),
-            }
-        }
-    },
+    // server: {
+    //     open: true,
+    //     port:3000,
+    //     proxy: {
+    //         '/api/': {
+    //             target: 'http://localhost:8081',
+    //             changeOrigin: true,
+    //             rewrite: (path) =>path.replace(/^\/api/, ''),
+    //         }
+    //     }
+    // },
     preview: {
         port: 8080,
         open: true

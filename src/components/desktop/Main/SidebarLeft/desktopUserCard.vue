@@ -6,8 +6,8 @@ export default {
 
 <template>
 	<div id="desktop-user-card-bg"></div>
-	<img id="desktop-user-card-img" src="/image/main/UserCard/head.jpg">
-	<img id="desktop-user-card-name" src="/image/main/UserCard/username.png">
+	<img id="desktop-user-card-img" src="/desktop/image/main/UserCard/head.jpg">
+	<img id="desktop-user-card-name" src="/desktop/image/main/UserCard/username.png">
 	<p id="desktop-user-card-signature">一枚渣渣程序员∑(っ°Д°;)っ</p>
 </template>
 
@@ -22,7 +22,7 @@ export default {
 }
 
 #desktop-user-card-bg {
-	background-image: url('/image/main/UserCard/background.jpg');
+	background-image: url('/desktop/image/main/UserCard/background.jpg');
 }
 
 #desktop-user-card-img {

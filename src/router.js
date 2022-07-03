@@ -1,4 +1,5 @@
 import * as VueRouter from 'vue-router'
+
 import Desktop from "./components/Desktop.vue";
 import desktopProgram from "./components/desktop/Main/Content/desktopProgram";
 import desktopBook from "./components/desktop/Main/Content/desktopBook";
@@ -8,6 +9,9 @@ import desktopSaySay from "./components/desktop/Main/Content/desktopSaySay";
 import desktopLink from "./components/desktop/Main/Content/desktopLink";
 import desktopHome from "./components/desktop/Main/Content/desktopHome";
 import Mobile from "./components/Mobile";
+
+import mobileQuickComment from "./components/mobile/Main/mobileQuickComment";
+import mobileHome from "./components/mobile/Main/mobileHome";
 
 const desktopRoutes = [
     {
@@ -44,29 +48,31 @@ const desktopRoutes = [
     }
 ]
 
-// const mobileRoutes = [
-//     {
-//         path: 'home',
-//     },
-//     {
-//         path: 'program',
-//     },
-//     {
-//         path: 'book',
-//     },
-//     {
-//         path: 'daily',
-//     },
-//     {
-//         path: 'message',
-//     },
-//     {
-//         path: 'saysay',
-//     },
-//     {
-//         path: 'link',
-//     }
-// ]
+const mobileRoutes = [
+    {
+        path: 'home',
+        component: mobileHome
+    },
+    {
+        path: 'program',
+    },
+    {
+        path: 'book',
+    },
+    {
+        path: 'daily',
+    },
+    {
+        path: 'message',
+        component: mobileQuickComment
+    },
+    {
+        path: 'saysay',
+    },
+    {
+        path: 'link',
+    }
+]
 
 const routes = [
     {
@@ -84,8 +90,9 @@ const routes = [
     {
         path: '/mobile',
         name: 'mobile',
-        component: Mobile
-        // children: mobileRoutes
+        redirect: '/mobile/home',
+        component: Mobile,
+        children: mobileRoutes
     }
 ]
 

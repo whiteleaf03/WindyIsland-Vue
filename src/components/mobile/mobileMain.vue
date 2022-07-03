@@ -1,13 +1,23 @@
 <template>
-
+	<router-view/>
 </template>
 
 <script>
 export default {
-	name: "mobileMain"
+	name: "mobile-main",
+	data() {
+		return {
+			screenWidth: ""
+		}
+	},
+	methods: {
+
+	},
+	mounted() {
+	}
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

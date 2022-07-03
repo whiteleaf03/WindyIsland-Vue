@@ -6,23 +6,23 @@ export default {
 
 <template>
     <div class="desktop-user-info-raw">
-        <img class="icon" src="/image/main/UserInfo/email.icon.png">
+        <img class="icon" src="/desktop/image/main/UserInfo/email.icon.png">
         <p class="desktop-user-info-link">whiteleaf03@163.com</p>
     </div>
     <div class="desktop-user-info-raw">
-        <img class="icon" src="/image/main/UserInfo/bilibili.icon.png">
+        <img class="icon" src="/desktop/image/main/UserInfo/bilibili.icon.png">
         <a class="desktop-user-info-link" id="bilibili-space" href="https://space.bilibili.com/22199790">B站个人空间</a>
     </div>
     <div class="desktop-user-info-raw">
-        <img class="icon" src="/image/main/UserInfo/github.icon.png">
+        <img class="icon" src="/desktop/image/main/UserInfo/github.icon.png">
         <a class="desktop-user-info-link" id="github-space" href="https://github.com/whiteleaf03">GitHub个人主页</a>
     </div>
     <div class="desktop-user-info-raw">
-        <img class="icon" src="/image/main/UserInfo/gitee.icon.png">
+        <img class="icon" src="/desktop/image/main/UserInfo/gitee.icon.png">
         <a class="desktop-user-info-link" id="gitee-space" href="https://gitee.com/whiteleaf03">Gitee个人主页</a>
     </div>
     <div class="desktop-user-info-raw">
-        <img class="icon" src="/image/main/UserInfo/cloudmusic.icon.png">
+        <img class="icon" src="/desktop/image/main/UserInfo/cloudmusic.icon.png">
         <a class="desktop-user-info-link" id="cloudmusic-space" href="https://music.163.com/#/user/home?id=547485668">网易云音乐个人主页</a>
     </div>
 </template>

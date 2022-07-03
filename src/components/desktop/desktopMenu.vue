@@ -3,49 +3,49 @@
 		<li class="desktop-menu-list-li">
 			<router-link to="/">
 				<img class="desktop-menu-icon"
-					 src="/image/menu/home.icon.png">首页
+					 src="/desktop/image/menu/home.icon.png">首页
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/program">
 				<img class="desktop-menu-icon"
-					 src="/image/menu/code.icon.png">编程
+					 src="/desktop/image/menu/code.icon.png">编程
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/book">
 				<img class="desktop-menu-icon"
-					 src="/image/menu/book.icon.png">书籍
+					 src="/desktop/image/menu/book.icon.png">书籍
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/daily">
 				<img class="desktop-menu-icon"
-					 src="/image/menu/daily.icon.png">日常
+					 src="/desktop/image/menu/daily.icon.png">日常
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/message">
 				<img class="desktop-menu-icon"
-					 src="/image/menu/message.icom.png">留言
+					 src="/desktop/image/menu/message.icom.png">留言
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/saysay">
 				<img class="desktop-menu-icon"
-					 src="/image/menu/saysay.icon.png">说说
+					 src="/desktop/image/menu/saysay.icon.png">说说
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/link">
 				<img class="desktop-menu-icon"
-					 src="/image/menu/link.icon.png">友链
+					 src="/desktop/image/menu/link.icon.png">友链
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/user">
 				<img id="login"
-					 src="/image/menu/user.icon.png">
+					 src="/desktop/image/menu/user.icon.png">
 			</router-link>
 		</li>
 	</ul>

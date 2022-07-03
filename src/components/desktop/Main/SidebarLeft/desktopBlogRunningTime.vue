@@ -1,6 +1,6 @@
 <template>
     <p class="runtime-text">本博客已运行(≧ω≦)</p>
-    <p class="runtime-text" id="time">{{value}}</p>
+    <p class="runtime-text">{{value}}</p>
 </template>
 
 <script>

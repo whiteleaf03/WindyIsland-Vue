@@ -39,6 +39,7 @@ export default {
 	height: auto;
 	background-color: rgba(245, 245, 245, 0.5);
 	border-radius: 5px;
+	backdrop-filter: blur(50px);
 }
 
 #desktop-sidebar-right {

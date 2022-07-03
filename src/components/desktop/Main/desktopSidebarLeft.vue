@@ -26,6 +26,7 @@
         border-radius: 5px;
         background-color: rgba(245, 245, 245, 0.5);
         margin-bottom: 16px;
+		backdrop-filter: blur(25px);
     }
 
     #desktop-user-info {
@@ -36,6 +37,7 @@
         padding: 12px 16px;
         background-color: rgba(245, 245, 245, 0.5);
         margin-bottom: 16px;
+		backdrop-filter: blur(25px);
     }
 
     #BlogRunningTime {
@@ -45,5 +47,6 @@
         background-color: rgba(245, 245, 245, 0.5);
         padding: 12px 16px;
         font-size: 15px;
+		backdrop-filter: blur(25px);
     }
 </style>

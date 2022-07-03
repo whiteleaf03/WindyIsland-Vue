@@ -1,3 +1,18 @@
+<template>
+	<div id="comment-title">
+		<img id="comment-title-img"
+			 src="/desktop/image/main/QuickComment/comment-title.png">
+	</div>
+	<input id="comment-username" class="comment-input" ref="username" placeholder="昵称*"
+		   type="text">
+	<input id="comment-email" class="comment-input" ref="email" placeholder="邮箱*"
+		   type="text">
+	<textarea id="comment-user-comment" class="comment-input" ref="message"
+			  placeholder="评论由人工审核&#13;&#10;通过后会发送邮件提示&#13;&#10;最多255个字哦(｀・ω・´)"></textarea>
+	<input id="comment-valid" class="comment-input" :placeholder="this.question" type="text" ref="answer">
+	<input v-on:click="validResult" id="comment-button" class="comment-input" type="button" value="提交">
+</template>
+
 <script>
 
 import {postQuickSaySay} from "../../../../request";
@@ -32,10 +47,10 @@ export default {
 			this.question = `${this.randomNum1} + ${this.randomNum2} = ?`
 
 		},
-		validResult() {
+		async validResult() {
 			this.answer = this.$refs.answer.value
 			if (this.answer === `${this.randomResult}`) {
-				this.postQuickComment()
+				await this.postQuickComment()
 			} else {
 				alert(`验证码错误！ ${this.answer} ${this.randomResult}`)
 			}
@@ -45,23 +60,6 @@ export default {
 
 
 </script>
-
-<template>
-	<div id="comment-title">
-		<img id="comment-title-img"
-			 src="/image/main/QuickComment/comment-title.png">
-	</div>
-	<form>
-		<input id="comment-username" class="comment-input" ref="username" placeholder="昵称*"
-			   type="text">
-		<input id="comment-email" class="comment-input" ref="email" placeholder="邮箱*"
-			   type="text">
-		<textarea id="comment-userComment" class="comment-input" ref="message"
-				  placeholder="评论由人工审核&#13;&#10;通过后会发送邮件提示&#13;&#10;最多255个字哦(｀・ω・´)"></textarea>
-		<input id="comment-valid" class="comment-input" :placeholder="this.question" type="text" ref="answer">
-		<input v-on:click="validResult" id="comment-button" class="comment-input" type="button" value="提交">
-	</form>
-</template>
 
 <style>
 #comment-title {
@@ -107,7 +105,7 @@ export default {
 	height: 25px;
 }
 
-#comment-userComment {
+#comment-user-comment {
 	position: absolute;
 	top: 149px;
 	left: 16px;
