@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import {getSaySay} from "../../../../request";
+import {getSaysay} from "../../../../request";
 
 export default {
 	name: "desktop-latest-saysay",
@@ -26,7 +26,7 @@ export default {
 	},
 	methods: {
 		async getLatestSaySay() {
-			this.saysay = await getSaySay()
+			this.saysay = await getSaysay()
 			this.time = this.saysay[this.saysay.length - 1].time.slice(0, -2)
 			this.message = this.saysay[this.saysay.length - 1].message
 		}

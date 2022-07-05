@@ -6,8 +6,6 @@ import router from './router'
 import qs from "qs";
 
 
-axios.defaults.baseURL = '/api/'
-
 const app = createApp(App)
 app.config.globalProperties.qs = qs;
 app.use(VueAxios, axios)

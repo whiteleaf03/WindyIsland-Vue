@@ -14,12 +14,10 @@ export default {
 		if (device.mobile()) {
 			console.log('移动设备')
 			document.getElementsByTagName("body")[0].style.backgroundImage = 'url("/mobile/image/mobile-background.jpg")';
-			document.getElementsByTagName("body")[0].style.backgroundSize = '120%';
 			this.$router.push('/mobile')
 		} else {
 			console.log('desktop设备')
 			document.getElementsByTagName("body")[0].style.backgroundImage = 'url("/desktop/image/desktop-background.jpg")';
-			// document.getElementsByTagName("body")[0].style.backgroundImage = 'url("/desktop/image/123.jpg")';
 			this.$router.push('/desktop')
 		}
 	}
@@ -31,4 +29,11 @@ export default {
         margin: 0;
 		text-align: center;
     }
+
+	body {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
 </style>

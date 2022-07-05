@@ -9,7 +9,8 @@ export default {
 
 	methods: {
 		showData() {
-
+			debugger
+			this.$router.push('/admin/login')
 		}
 	}
 }

@@ -1,42 +1,45 @@
 <template>
 	<div id="mobile-main-back">
 		<div id="mobile-main-font">
-			<mobile-main/>
+			<router-view/>
 		</div>
 	</div>
-	<mobile-blog-running-time/>
+<!--	<mobile-blog-running-time/>-->
 	<mobile-menu/>
 </template>
 
 <script>
-import mobileMenu from "./mobile/mobileMenu";
-import mobileMain from "./mobile/mobileMain";
-import MobileBlogRunningTime from "./mobile/Main/mobileBlogRunningTime";
+import mobileMenu from "./mobile/mobileMenuButton";
+import MobileBlogRunningTime from "./mobile/mobileBlogRunningTime";
 
 export default {
 	name: "mobile",
-	components: {MobileBlogRunningTime, mobileMain, mobileMenu},
+	components: {MobileBlogRunningTime, mobileMenu},
 	created() {
 
 	},
 	mounted() {
-		document.getElementById('mobile-main-back').style.width = `${window.innerWidth - 32}px`
-		document.getElementById('mobile-main-back').style.margin = `16px auto 0`
+		document.getElementById('mobile-main-back').style.width = `${document.documentElement.clientWidth - 32}px`
+		document.getElementById('mobile-main-font').style.width = `${document.getElementById('mobile-main-back').style.width - 32}px`
+		document.getElementById('mobile-main-font').style.maxHeight = `${document.documentElement.clientHeight * 0.75}px`
+		document.getElementsByTagName('body')[0].backgroundSize = `${document.documentElement.clientWidth}px auto`
 	}
 }
 </script>
 
 <style scoped>
 #mobile-main-back {
-	margin: 0 auto;
-	background: rgba(245, 245, 245, 0.5);
+	margin: 32px auto 0;
 	height: auto;
-	border-radius: 25px;
-	padding: 36px;
+	width: 100%;
+	padding: 16px;
 }
 
 #mobile-main-font {
-	border-radius: 25px;
-	width: 340px;
+	border-radius: 5px;
+	padding: 8px 0;
+	background: rgba(245, 245, 245, 0.5);
+	backdrop-filter: blur(3px);
+	overflow: auto;
 }
 </style>

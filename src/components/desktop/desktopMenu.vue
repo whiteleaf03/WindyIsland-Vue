@@ -9,7 +9,7 @@
 		<li class="desktop-menu-list-li">
 			<router-link to="/desktop/program">
 				<img class="desktop-menu-icon"
-					 src="/desktop/image/menu/code.icon.png">编程
+					 src="/desktop/image/menu/program.icon.png">编程
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
@@ -25,9 +25,9 @@
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
-			<router-link to="/desktop/message">
+			<router-link to="/desktop/comment">
 				<img class="desktop-menu-icon"
-					 src="/desktop/image/menu/message.icom.png">留言
+					 src="/desktop/image/menu/comment.icom.png">留言
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
@@ -43,7 +43,7 @@
 			</router-link>
 		</li>
 		<li class="desktop-menu-list-li">
-			<router-link to="/desktop/user">
+			<router-link to="/admin">
 				<img id="login"
 					 src="/desktop/image/menu/user.icon.png">
 			</router-link>
@@ -53,7 +53,10 @@
 
 <script>
 export default {
-	name: "desktop-menu"
+	name: "desktop-menu",
+	created() {
+
+	}
 }
 </script>
 

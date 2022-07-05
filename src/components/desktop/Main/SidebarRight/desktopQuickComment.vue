@@ -45,7 +45,6 @@ export default {
 			this.randomNum2 = Math.round(Math.random() * 10);
 			this.randomResult = this.randomNum1 + this.randomNum2;
 			this.question = `${this.randomNum1} + ${this.randomNum2} = ?`
-
 		},
 		async validResult() {
 			this.answer = this.$refs.answer.value
@@ -57,8 +56,6 @@ export default {
 		}
 	}
 }
-
-
 </script>
 
 <style>
